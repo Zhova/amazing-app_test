@@ -1,4 +1,5 @@
 $(document).ready(function () {
+  // responsive header
   $(".burger").click(() => {
     $(".header-nav").fadeToggle();
     $(".burger__line").toggleClass("active");
@@ -22,4 +23,13 @@ $(document).ready(function () {
       $hederNav.append($hederBtnRequest);
     }
   })();
+
+  // sliders
+  $(".main-slider").slick({
+    infinite: true,
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    dots: true,
+    arrows: false,
+  });
 });

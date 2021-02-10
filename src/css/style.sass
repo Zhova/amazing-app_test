@@ -24,7 +24,40 @@ ul
 	width: 100%
 	max-width: 1120px
 
+.slick
+	&-slider
+		*
+			max-width: none
+	&-dots
+		display: flex
+		justify-content: center
+		margin-top: 30px
+		li
+			width: 8px
+			height: 8px
+			margin-right: 8px
+			border-radius: 50%
+			background: rgba(156, 105, 226, 0.2)
+			cursor: pointer
+			&:last-child
+				margin-right: 0
+		.slick-active
+			background: #9C69E2
+		button
+			font-size: 0
+
 .text
+	&_blue
+		color: #212353
+	&_gray
+		color: #4B5D68
+	&_height-big
+		line-height: 160%
+
+	&_title
+		&-slider
+			font-weight: 800
+			font-size: 72px
 	&_regular
 		font-size: 16px
 		font-weight: 500
@@ -32,16 +65,25 @@ ul
 			font-weight: 800
 		&-thin
 			font-weight: normal
-
+	&_big
+		font-size: 18px
+		font-weight: 500
+		&-bold
+			font-weight: 800
+		&-thin
+			font-weight: normal
 .btn
 	cursor: pointer
+	line-height: 160%
+	border-radius: 50px
+	font-weight: 800
+	font-size: 18px
+	display: inline-block
 	&_request
-		width: 210px
-		height: 60px
+		padding: 17px 0
 		padding-left: 30px
 		padding-right: 70px
 		box-shadow: 0px 5px 5px rgba(75, 93, 104, 0.1)
-		border-radius: 50px
 		position: relative
 		display: flex
 		align-items: center
@@ -53,7 +95,10 @@ ul
 			height: 14px
 			background: url('../img/next-icon.svg')
 			background-size: cover
-
+	&_purple
+		padding: 16px 37px
+		background: #9C69E2
+		color: #fff
 .search
 	&__toggle
 		width: 20px
@@ -144,3 +189,23 @@ ul
 					transition: .5s
 		&-search-mob
 			display: none
+.main
+	&-slider
+		&__item
+			border-radius: 50px
+			padding: 80px 105px
+			position: relative
+			overflow: hidden
+		&__bg
+			left: 0
+			top: 0
+			width: 100%
+			height: 100%
+			position: absolute
+		&__info-block
+			position: relative
+			max-width: 60%
+		&__title,&__desc
+			margin-bottom: 18px
+		&__desc
+			max-width: 380px

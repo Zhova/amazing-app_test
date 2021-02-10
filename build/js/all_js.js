@@ -1,6 +1,7 @@
 "use strict";
 
 $(document).ready(function () {
+  // responsive header
   $(".burger").click(function () {
     $(".header-nav").fadeToggle();
     $(".burger__line").toggleClass("active");
@@ -21,5 +22,14 @@ $(document).ready(function () {
       $burgerWrap.prepend($headerSearchBlock);
       $hederNav.append($hederBtnRequest);
     }
-  })();
+  })(); // sliders
+
+
+  $(".main-slider").slick({
+    infinite: true,
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    dots: true,
+    arrows: false
+  });
 });

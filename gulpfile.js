@@ -19,10 +19,11 @@ const cssFiles = [
 const jsFiles = ["./src/js/script_1.js", "./src/js/script_2.js"];
 
 const libs = [
-  "./node_modules/parallax-js/dist/parallax.min.js",
   "./node_modules/jquery/dist/jquery.min.js",
   "./node_modules/wowjs/dist/wow.min.js",
+  "./node_modules/slick-carousel/slick/slick.js",
 ];
+const libsCss = ["./node_modules/slick-carousel/slick/slick.css"];
 
 const img = ["./src/img/*"];
 
@@ -84,6 +85,13 @@ function Libs() {
     .pipe(gulp.dest("./build/js"))
     .pipe(browserSync.stream());
 }
+function LibsCss() {
+  return gulp
+    .src(libsCss)
+    .pipe(concat("all_libs.css"))
+    .pipe(gulp.dest("./build/css"))
+    .pipe(browserSync.stream());
+}
 
 function ImgMIn() {
   return (
@@ -128,13 +136,14 @@ gulp.task("Script", Script);
 gulp.task("ImgMIn", ImgMIn);
 gulp.task("Fonts", Fonts);
 gulp.task("Libs", Libs);
+gulp.task("LibsCss", LibsCss);
 gulp.task("Watch", Watch);
 
 gulp.task(
   "build",
   gulp.series(
     Clean,
-    gulp.parallel(Styles, Script, ImgMIn, Html, Libs, ImgMIn, Fonts)
+    gulp.parallel(Styles, Script, ImgMIn, Html, Libs, LibsCss, ImgMIn, Fonts)
   )
 );
 gulp.task("dev", gulp.series("build", Watch));
