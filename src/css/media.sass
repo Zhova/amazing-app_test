@@ -1,0 +1,47 @@
+
+// // =============== large
+// @media screen and (max-width: 1500px)
+
+// =============== tablet 
+@media screen and (max-width: 1199px)
+
+    .container
+        width: 90%
+
+    .header
+        &-logo
+            margin-right: 0
+        &-nav
+            position: absolute
+            width: 100%
+            height: 50vh
+            background: #fff
+            left: 0
+            top: 0
+            justify-content: center
+            z-index: 999
+            display: flex
+            flex-direction: column
+            padding: 20px
+            display: none
+        .nav-list
+            flex-direction: column
+            align-items: center
+            justify-content: space-around
+            height: 100%
+            &__item
+                margin-right: 0
+        &-btn
+            margin: 0 auto
+        .burger
+            display: block
+            &-search-mob
+                display: flex
+        .search
+            margin-right: 28px
+            &__block
+                left: 50%
+                transform: translateX(-50%)
+
+// =============== mobile
+// @media screen and (max-width: 767px)

@@ -1,0 +1,28 @@
+mixin header
+	+b.HEADER.header-wrap.wrap
+		+b.header.container
+			+b.header-menu
+				+b.header-logo
+					a(href="/")
+						img(src="./img/logo.png", alt="")
+				+b.NAV.header-nav
+					+b.UL.nav-list
+						+e.LI.item 
+							a(href="#") About
+						+e.LI.item 
+							a(href="#") Help
+						+e.LI.item 
+							a(href="#") Features
+						+e.LI.item 
+							a(href="#") Signup
+					+b.search
+						+e.toggle
+						+e.block
+							+e.INPUT(type="text" placeholder="Search").place
+							+e.INPUT(type="submit" value="").btn
+			+b.A.btn_request.header-btn Request Demo
+			+b.burger-search-mob
+				+b.burger
+					+e.line
+					+e.line
+					+e.line

@@ -1,0 +1,146 @@
+
+*, *:after, *:before
+	box-sizing: border-box
+	font-family: 'Roboto'
+	padding: 0
+	margin: 0
+	text-decoration: none
+	color: inherit
+	max-width: 100%
+	font-weight: 300
+	outline: none
+	transition: .3s
+
+ul
+	li
+		list-style: none
+
+.wrap
+	width: 100%
+	display: flex
+	justify-content: center
+
+.container
+	width: 100%
+	max-width: 1120px
+
+.text
+	&_regular
+		font-size: 16px
+		font-weight: 500
+		&-bold
+			font-weight: 800
+		&-thin
+			font-weight: normal
+
+.btn
+	cursor: pointer
+	&_request
+		width: 210px
+		height: 60px
+		padding-left: 30px
+		padding-right: 70px
+		box-shadow: 0px 5px 5px rgba(75, 93, 104, 0.1)
+		border-radius: 50px
+		position: relative
+		display: flex
+		align-items: center
+		&::after
+			content: ''
+			position: absolute
+			right: 30px
+			width: 20px
+			height: 14px
+			background: url('../img/next-icon.svg')
+			background-size: cover
+
+.search
+	&__toggle
+		width: 20px
+		height: 20px
+		cursor: pointer
+		background: url('../img/search-icon.svg')
+		&:hover
+			transform: rotate(20deg)
+	&__block
+		display: none
+		position: absolute
+	&__place
+		min-height: 40px
+		box-shadow: 0px 5px 5px rgba(75, 93, 104, 0.1)
+		border-radius: 50px
+		padding: 20px
+		border: 0
+		margin-right: 20px
+		background: #ffffff
+	&__btn
+		width: 20px
+		height: 20px
+		border: 0
+		background: url('../img/search-icon.svg')
+		position: absolute
+		top: 50%
+		transform: translateY(-50%)
+		cursor: pointer
+
+.header
+	height: 160px
+	background: #fff
+	display: flex
+	align-items: center
+	justify-content: space-between
+	&-logo
+		margin-right: 125px
+		img
+			max-width: 150px
+
+	&-nav,
+	.nav-list
+		display: flex
+		align-items: center
+	.nav-list
+		&__item
+			margin-right: 45px
+	&-menu
+		display: flex
+		justify-content: space-between
+	&-contacts
+		display: flex
+		&__tel
+			margin-right: 20px
+			position: relative
+
+			&::before
+				content: ''
+				position: absolute
+				background: url('../img/tel-icon.svg')
+				left: -20px
+				width: 15px
+				height: 30px
+				background-repeat: no-repeat
+
+	.burger
+		width: 40px
+		z-index: 9999
+		&__line
+			width: 100%
+			height: 4px
+			background: #707070
+			border-radius: 32px
+			margin-bottom: 5px
+			transform-origin: 20% 50%
+			transition: .5s
+			&:nth-child(2)
+				&.active
+					opacity: 0
+					transition: .5s
+			&:nth-child(1)
+				&.active
+					transform: rotate(45deg)
+					transition: .5s
+			&:nth-child(3)
+				&.active
+					transform: rotate(-45deg)
+					transition: .5s
+		&-search-mob
+			display: none
