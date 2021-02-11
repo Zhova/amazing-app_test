@@ -230,7 +230,9 @@ ul
 			max-width: 380px
 
 .features
-	padding-top: 85px
+	&-wrap
+		padding-top: 85px
+		padding-bottom: 100px
 	.title-default
 		margin-bottom: 75px
 		&__title
@@ -321,3 +323,68 @@ ul
 
 		&:nth-child(2n+2)
 			margin-left: 140px
+
+.footer
+	&-wrap
+		padding-top: 100px
+		padding-top: 50px
+		border-top: 2px solid rgba(156, 105, 226, .2)
+	.title-default
+		&__title
+			margin-bottom: 20px
+	&-top
+		display: flex
+		justify-content: space-between
+		margin-bottom: 150px
+	&-bottom
+		margin-bottom: 90px
+		display: flex
+
+	&-btn-block
+		display: flex
+		align-items: center
+	.btn_purple
+		margin-right: 30px
+
+	&-logo
+		margin-bottom: 70px
+		a
+			display: flex
+			align-items: center
+			img
+				margin-right: 20px
+		&__text
+			font-weight: 800
+			font-size: 20px
+			line-height: 160%
+	&-list
+		&__title
+			margin-top: 15px
+			margin-bottom: 50px
+		&__contacts,
+		&__about,
+		&__help
+			display: flex
+			flex-direction: column
+		&__contacts
+			.footer-list__item
+				line-height: 180%
+				margin-bottom: 20px
+			.footer-mail,.footer-phone
+				line-height: 1
+		&__item
+			margin-bottom: 21px
+		&_contacts
+			width: 43%
+		&_about,&_help
+			width: 21%
+		&_social
+			width: 16%
+		&__social
+			display: flex
+			justify-content: space-between
+	&-copyright
+		font-weight: normal
+		font-size: 12px
+		line-height: 180%
+		max-width: 25%

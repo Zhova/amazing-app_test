@@ -1,3 +1,48 @@
 mixin footer
-	+b.FOOTER.footer#footer.wrap
-		+b.footer-content.container
+	+b.FOOTER.footer-wrap#footer.wrap
+		+b.footer.container
+			+b.footer-top 
+				+b.title-default 
+					+e.P.title.text_title-regular._blue Try for free!
+					+e.P.desc.text_big._gray._height-big Get limited 1 week free try our features!
+				+b.footer-btn-block 
+					+b.btn_purple Learn more
+					+b.A.btn_request.header-btn Request Demo
+			+b.footer-bottom.text_blue
+				+b.footer-list_contacts 
+					+b.footer-logo 
+						a(href="/")
+							img(src="./img/logo.png", alt="")
+							+e.P.text DataWare
+					+e.contacts
+						+e.P.item.footer-address.text_regular Warehouse Society, 234 #[br]Bahagia Ave Street PRBW 29281
+						+e.A(href="mailto:info@warehouse.project ").item.footer-mail.text_regular info@warehouse.project 
+						+e.A(href="tel:info@warehouse.project ").item.footer-phone.text_regular 1-232-3434 (Main)
+				+b.footer-list_about
+					+e.P.title.text_regular-bold About
+					+e.about 
+						+e.A(href="#").item.text_regular Profile
+						+e.A(href="#").item.text_regular Features 
+						+e.A(href="#").item.text_regular Careers 
+						+e.A(href="#").item.text_regular DW News
+				+b.footer-list_help 
+					+e.P.title.text_regular-bold Help
+					+e.help 
+						+e.A(href="#").item.text_regular Support
+						+e.A(href="#").item.text_regular Sign up 
+						+e.A(href="#").item.text_regular Guide
+						+e.A(href="#").item.text_regular Reports
+						+e.A(href="#").item.text_regular Q&A
+				+b.footer-list_social
+					+e.P.title.text_regular-bold Social Media
+					+e.social
+						+e.A(href="#")
+							img(src="./img/facebook.svg", alt="alt")
+						+e.A(href="#")
+							img(src="./img/instagram.svg", alt="alt")
+						+e.A(href="#")
+							img(src="./img/twitter.svg", alt="alt")
+					
+			+b.footer-copyright.text_blue
+				p © Datawarehouse™, 2020. All rights reserved. Company Registration Number: 21479524.
+
