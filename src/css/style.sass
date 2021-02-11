@@ -45,6 +45,7 @@ ul
 			background: #9C69E2
 		button
 			font-size: 0
+			opacity: 0
 
 .text
 	&_blue
@@ -58,6 +59,14 @@ ul
 		&-slider
 			font-weight: 800
 			font-size: 72px
+		&-regular
+			font-weight: 800
+			font-size: 40px
+			line-height: 130%
+		&-small
+			font-weight: 500
+			font-size: 24px
+			line-height: 130%
 	&_regular
 		font-size: 16px
 		font-weight: 500
@@ -72,6 +81,14 @@ ul
 			font-weight: 800
 		&-thin
 			font-weight: normal
+
+.title-default
+	max-width: 585px
+	&_center
+		margin: 0 auto
+		p
+			text-align: center
+
 .btn
 	cursor: pointer
 	line-height: 160%
@@ -190,6 +207,8 @@ ul
 		&-search-mob
 			display: none
 .main
+	&-wrap
+		padding-top: 25px
 	&-slider
 		&__item
 			border-radius: 50px
@@ -209,3 +228,96 @@ ul
 			margin-bottom: 18px
 		&__desc
 			max-width: 380px
+
+.features
+	padding-top: 85px
+	.title-default
+		margin-bottom: 75px
+		&__title
+			margin-bottom: 26px
+	&-content
+		display: flex
+		flex-wrap: wrap
+	&-item
+		max-width: 440px
+		min-height: 358px
+		margin-left: 100px
+		padding: 56px 50px 30px 170px
+		margin-bottom: 80px
+		border-radius: 50px
+		// clip-path: polygon(17% 0, 100% 0, 100% 100%, 0% 100%)
+		position: relative
+		display: flex
+		flex-direction: column
+		align-items: flex-start
+		&__bg
+			width: 100%
+			height: 100%
+			position: absolute
+			right: 0
+			top: 0
+			background-size: cover !important
+			background-repeat: no-repeat !important
+			z-index: -1
+		&__title,&__desc
+			display: -webkit-box
+			-webkit-box-orient: vertical
+			overflow-y: hidden
+		&__title
+			margin-bottom: 30px
+			-webkit-line-clamp: 1
+		&__desc
+			margin-bottom: 35px
+			flex: 1 1 auto
+			-webkit-line-clamp: 6
+
+		&__more
+			padding-right: 40px
+			position: relative
+			&::after
+				content: ''
+				position: absolute
+				right: 0
+				top: 50%
+				transform: translateY(-50%)
+				width: 20px
+				height: 14px
+				background: url('../img/next-icon.svg')
+				background-size: cover
+
+		&__icon
+			left: -100px
+			position: absolute
+		&_first
+			.features-item
+				&__bg
+					background: url('../img/featuresBG-1.svg')
+				&__icon
+					top: 70px
+			// background: rgba(104, 201, 186, .1)
+		&_second
+			.features-item
+				&__bg
+					background: url('../img/featuresBG-2.svg')
+				&__icon
+					top: 85px
+			// background: rgba(45, 156, 219, .1)
+		&_third
+			.features-item
+				&__bg
+					background: url('../img/featuresBG-3.svg')
+				&__icon
+					left: -115px
+					top: 130px
+
+			// background: rgba(240, 99, 184, .1)
+		&_fourth
+			.features-item
+				&__bg
+					background: url('../img/featuresBG-4.svg')
+				&__icon
+					top: 75px
+			// background: rgba(156, 105, 226, .1)
+
+		&:nth-child(2n+2)
+			margin-left: 140px
