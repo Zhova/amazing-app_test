@@ -1,17 +1,15 @@
 "use strict";
 
 $(document).ready(function () {
-  // main variables
-  var $body = $("body"); // responsive header
-
+  // responsive header
   $(".burger").click(function () {
-    $(".header-nav").fadeToggle();
+    $(".header-nav").toggle();
     $(".burger__line").toggleClass("active");
   });
   var $searchBtn = $(".search__toggle");
   var $searchBlock = $(".search__block");
   $searchBtn.click(function () {
-    $searchBlock.fadeToggle();
+    $searchBlock.toggle();
   });
   var $hederBtnRequest = $(".header-btn");
   var $hederNav = $(".header-nav");
@@ -23,21 +21,27 @@ $(document).ready(function () {
       $burgerWrap.prepend($headerSearchBlock);
       $hederNav.append($hederBtnRequest);
     }
-  })(); // sliders
-
-
+  })();
+});
+$(document).ready(function () {
   $(".main-slider").slick({
     infinite: true,
     slidesToShow: 1,
     slidesToScroll: 1,
     dots: true,
     arrows: false
-  }); // modal request
+  });
+});
+$(document).ready(function () {
+  var _this = this;
 
+  var $body = $("body");
   var $modalWrap = $(".modal-wrap");
   var $requestBtn = $(".btn_request");
   var $requestModal = $(".request-modal-wrap");
-  var $requestBg = $(".modal-request-bg");
+  var $inputsRequest = $(".modal-request-form .validate"); // const $requestBg = $(".modal-request-bg");
+
+  var $requestForm = $(".modal-request-form");
   $requestBtn.click(function () {
     $requestModal.addClass("open");
     $body.css("overflowY", "hidden");
@@ -48,9 +52,18 @@ $(document).ready(function () {
       $body.css("overflowY", "auto");
     }
   });
-  var countStringsMessage = 0;
-  countStringsMessage += $(".modal-request-form__message").val().split("\n").length;
-  setInterval(function () {
-    console.log(countStringsMessage);
-  }, 1000);
+  $requestForm.submit(function (event) {
+    $(".error").remove();
+    event.preventDefault();
+    $inputsRequest.each(function (e, i) {
+      if (!$(i).val()) {
+        var error = "<span class='error'>Cannot be blank</span>";
+        console.log($(_this));
+        $(i).css("border-bottom", "2px solid red");
+        $(i).before(error);
+      } else {
+        $(i).css("border-bottom", "2px solid rgba(156, 105, 226, 0.2");
+      }
+    });
+  });
 });

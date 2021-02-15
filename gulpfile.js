@@ -16,7 +16,11 @@ const cssFiles = [
   "./src/css/media.sass",
 ];
 
-const jsFiles = ["./src/js/script_1.js", "./src/js/script_2.js"];
+const jsFiles = [
+  "./src/js/main.js",
+  "./src/js/sliders.js",
+  "./src/js/modalRequest.js",
+];
 
 const libs = [
   "./node_modules/jquery/dist/jquery.min.js",

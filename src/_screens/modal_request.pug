@@ -1,19 +1,19 @@
 mixin modal_request
     +b.modal-wrap.wrap.request-modal-wrap
         +b.modal-request-bg.container
-            +b.modal-request.container
+            +b.modal-request
                 +b.title-default_center 
                     +e.P.title.text_title-regular._blue Request Demo
                 +b.FORM.modal-request-form
                     +e.left
                         +e.LABEL.name-label.label Name
-                            +e.INPUT(type="text")
+                            +b.INPUT(type="text").validate
                         +e.LABEL.name-label.label Email
-                            +e.INPUT(type="email")
+                            +b.INPUT(type="email").validate
                         +e.LABEL.name-label.label Web
-                            +e.INPUT(type="text")
+                            +b.INPUT(type="text").validate
                     +e.right
                         +e.LABEL.name-label.label Web
                             +e.TEXTAREA.message
-                        +b.A.btn_purple Learn more
+                        +b.INPUT(type="submit" value="Send").btn_purple Learn more
 

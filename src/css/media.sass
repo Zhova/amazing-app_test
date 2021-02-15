@@ -28,7 +28,7 @@
             left: 0
             top: 0
             justify-content: center
-            z-index: 999
+            z-index: 3
             display: flex
             flex-direction: column
             padding: 20px
@@ -74,8 +74,9 @@
         &-item
             margin-left: 0
             padding: 120px 40px 47px
+            margin-bottom: 120px
             &:nth-child(2n+2)
-                margin-left: 0
+                margin-left: 30px
             &:last-child
                 margin-bottom: 0
             &__bg
@@ -129,14 +130,29 @@
             flex-direction: column
             align-items: center
 
+    .modal
+        &-wrap
+        &-request
+            .title-default
+                margin-bottom: 30px
+            &-form
+                flex-direction: column
+                &__left,&__right
+                    width: 100%
+                    margin: 0
+
 // =============== mobile
 @media screen and (max-width: 767px)
 
     .main
         &-slider
             &__item
-                padding: 40px
+                padding: 30px
 
+    .features
+        &-item
+            &:nth-child(2n+2)
+                margin-left: 0
     .footer
         &-wrap
             background: rgba(156, 105, 226, .1)
