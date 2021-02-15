@@ -1,0 +1,19 @@
+mixin modal_request
+    +b.modal-wrap.wrap.request-modal-wrap
+        +b.modal-request-bg.container
+            +b.modal-request.container
+                +b.title-default_center 
+                    +e.P.title.text_title-regular._blue Request Demo
+                +b.FORM.modal-request-form
+                    +e.left
+                        +e.LABEL.name-label.label Name
+                            +e.INPUT(type="text")
+                        +e.LABEL.name-label.label Email
+                            +e.INPUT(type="email")
+                        +e.LABEL.name-label.label Web
+                            +e.INPUT(type="text")
+                    +e.right
+                        +e.LABEL.name-label.label Web
+                            +e.TEXTAREA.message
+                        +b.A.btn_purple Learn more
+

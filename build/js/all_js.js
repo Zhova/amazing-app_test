@@ -1,7 +1,9 @@
 "use strict";
 
 $(document).ready(function () {
-  // responsive header
+  // main variables
+  var $body = $("body"); // responsive header
+
   $(".burger").click(function () {
     $(".header-nav").fadeToggle();
     $(".burger__line").toggleClass("active");
@@ -11,7 +13,6 @@ $(document).ready(function () {
   $searchBtn.click(function () {
     $searchBlock.fadeToggle();
   });
-  var $header = $(".header");
   var $hederBtnRequest = $(".header-btn");
   var $hederNav = $(".header-nav");
   var $headerSearchBlock = $(".header .search");
@@ -31,5 +32,25 @@ $(document).ready(function () {
     slidesToScroll: 1,
     dots: true,
     arrows: false
+  }); // modal request
+
+  var $modalWrap = $(".modal-wrap");
+  var $requestBtn = $(".btn_request");
+  var $requestModal = $(".request-modal-wrap");
+  var $requestBg = $(".modal-request-bg");
+  $requestBtn.click(function () {
+    $requestModal.addClass("open");
+    $body.css("overflowY", "hidden");
   });
+  $modalWrap.click(function (e) {
+    if ($(e.target).hasClass("modal-wrap")) {
+      $requestModal.removeClass("open");
+      $body.css("overflowY", "auto");
+    }
+  });
+  var countStringsMessage = 0;
+  countStringsMessage += $(".modal-request-form__message").val().split("\n").length;
+  setInterval(function () {
+    console.log(countStringsMessage);
+  }, 1000);
 });

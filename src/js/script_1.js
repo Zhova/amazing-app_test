@@ -1,4 +1,7 @@
 $(document).ready(function () {
+  // main variables
+  const $body = $("body");
+
   // responsive header
   $(".burger").click(() => {
     $(".header-nav").fadeToggle();
@@ -11,7 +14,6 @@ $(document).ready(function () {
     $searchBlock.fadeToggle();
   });
 
-  const $header = $(".header");
   const $hederBtnRequest = $(".header-btn");
   const $hederNav = $(".header-nav");
   const $headerSearchBlock = $(".header .search");
@@ -32,4 +34,29 @@ $(document).ready(function () {
     dots: true,
     arrows: false,
   });
+
+  // modal request
+  const $modalWrap = $(".modal-wrap");
+  const $requestBtn = $(".btn_request");
+  const $requestModal = $(".request-modal-wrap");
+  const $requestBg = $(".modal-request-bg");
+
+  $requestBtn.click(() => {
+    $requestModal.addClass("open");
+    $body.css("overflowY", "hidden");
+  });
+  $modalWrap.click((e) => {
+    if ($(e.target).hasClass("modal-wrap")) {
+      $requestModal.removeClass("open");
+      $body.css("overflowY", "auto");
+    }
+  });
+
+  let countStringsMessage = 0;
+
+  countStringsMessage += $(".modal-request-form__message").val().split("\n")
+    .length;
+  setInterval(() => {
+    console.log(countStringsMessage);
+  }, 1000);
 });

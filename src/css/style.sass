@@ -388,3 +388,51 @@ ul
 		font-size: 12px
 		line-height: 180%
 		max-width: 25%
+
+.modal
+	&-wrap
+		background: rgba(0, 0, 0, 0.4)
+		width: 100%
+		height: 100%
+		left: 0
+		top: 0
+		position: fixed
+		overflow: hidden
+		display: flex
+		align-items: center
+		justify-content: center
+	&-request
+		border-radius: 50px
+		padding: 35px
+		background: #fff
+		&-bg
+			width: 100%
+			padding: 30px
+			border-radius: 50px
+			background: repeating-linear-gradient(-50deg,#fff,#fff 20px,#68C9BA 10px,#68C9BA 30px)
+		&-form
+			display: flex
+			label,input,textarea
+				width: 100%
+			input,textarea
+				border: 0
+				border-bottom: 2px solid rgba(156, 105, 226, .2)
+				margin-bottom: 44px
+			textarea
+				resize: none
+				height: 205px
+				background: url(../img/nodepad.svg)
+				line-height: 37px
+				margin-top: -12px
+
+				// line-height: 8ch
+				// background-image: linear-gradient(transparent, transparent calc(8ch - 2px), #E7EFF8 0px)
+				// background-size: 100% 8ch
+			&__left,&__right
+				width: 50%
+				display: flex
+				flex-direction: column
+.request-modal-wrap
+	height: 0%
+	&.open
+		height: 100%
