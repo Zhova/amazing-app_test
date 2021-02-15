@@ -5,16 +5,25 @@
 // =============== tablet 
 @media screen and (max-width: 1199px)
 
+    .title
+        &-default
+            &_center
+                margin: 0
+                p
+                    text-align: left
+
     .container
         width: 90%
 
     .header
+        height: 80px
         &-logo
-            margin-right: 0
+            img
+                max-width: 30px
         &-nav
             position: absolute
             width: 100%
-            height: 50vh
+            height: 60%
             background: #fff
             left: 0
             top: 0
@@ -28,11 +37,9 @@
             flex-direction: column
             align-items: center
             justify-content: space-around
-            height: 100%
+            height: 85%
             &__item
                 margin-right: 0
-        &-btn
-            margin: 0 auto
         .burger
             display: block
             &-search-mob
@@ -42,6 +49,97 @@
             &__block
                 left: 50%
                 transform: translateX(-50%)
+        &-btn
+            position: relative
+            left: 50%
+            transform: translateX(-50%)
+    .main
+        &-slider
+            &__item
+                padding: 40px
+            &__info-block
+                max-width: none
+            &__bg
+                object-fit: cover
+            &__title
+                font-size: 37px
+    .features
+        .title
+            &-default
+                margin-bottom: 100px
+                &__title
+                    margin-bottom: 13px
+        &-content
+            justify-content: center
+        &-item
+            margin-left: 0
+            padding: 120px 40px 47px
+            &:nth-child(2n+2)
+                margin-left: 0
+            &:last-child
+                margin-bottom: 0
+            &__bg
+                border-radius: 50px
+            &__icon
+                top: -57px !important
+                left: 50% !important
+                max-width: 180px
+                transform: translateX(-50%)
+            &__desc
+                margin-bottom: 20px
+
+            &_first
+                .features-item__bg
+                    background: rgba(104, 201, 186, .1)
+            &_second
+                .features-item__bg
+                    background: rgba(45, 156, 219, .1)
+            &_third
+                .features-item__bg
+                    background: rgba(240, 99, 184, .1)
+            &_fourth
+                .features-item__bg
+                    background: rgba(156, 105, 226, .1)
+        &-wrap
+            padding-bottom: 50px
+
+    .footer
+        &-wrap
+            background: rgba(156, 105, 226, .1)
+            border-top: 0
+        &-top
+            display: none
+
+        &-logo,&-copyright
+            display: none
+        &-list
+            text-align: center
+            &_about,
+            &_help,
+            &__title
+                display: none
+            &__social
+                a
+                    margin-right: 14px
+                    max-width: 50px
+            &_social,
+            &_contacts
+                width: auto
+        &-bottom
+            flex-direction: column
+            align-items: center
 
 // =============== mobile
-// @media screen and (max-width: 767px)
+@media screen and (max-width: 767px)
+
+    .main
+        &-slider
+            &__item
+                padding: 40px
+
+    .footer
+        &-wrap
+            background: rgba(156, 105, 226, .1)
+            border-top: 0
+        &-top
+            display: none
